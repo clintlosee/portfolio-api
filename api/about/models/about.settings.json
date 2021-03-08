@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "abouts",
   "info": {
-    "name": "about"
+    "name": "about",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -12,10 +13,6 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
-    },
-    "info": {
-      "type": "text",
       "required": true
     },
     "image": {
@@ -33,6 +30,10 @@
       "type": "component",
       "repeatable": true,
       "component": "description.stack-item",
+      "required": true
+    },
+    "info": {
+      "type": "richtext",
       "required": true
     }
   }

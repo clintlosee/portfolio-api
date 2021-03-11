@@ -1,5 +1,5 @@
 'use strict';
-const axios = require('axios');
+const {actionTrigger} = require('../../../lib/actionTrigger');
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/concepts/models.html#lifecycle-hooks)
@@ -9,43 +9,17 @@ const axios = require('axios');
 module.exports = {
   lifecycles: {
     async afterCreate(data) {
-      const url = 'https://api.github.com/repos/clintlosee/portfolio/dispatches';
-
-      const token = process.env.GITHUB_TOKEN;
-      console.log('token============:', token)
-
-      const headers = {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-        Accept: 'application/vnd.github.v3+json'
-      };
-
-      const axiosResult = await axios.post(
-        url,
-        { event_type: 'created' },
-        { headers }
-      );
-      console.log('axiosResult:', axiosResult)
+      console.log('AFTER CREATE');
+      if (process.env.NODE_ENV === 'production') {
+        actionTrigger('created');
+      }
     },
 
     async afterUpdate(data) {
-      const url = 'https://api.github.com/repos/clintlosee/portfolio/dispatches';
-
-      const token = process.env.GITHUB_TOKEN;
-      console.log('token Update============:', token)
-
-      const headers = {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-        Accept: 'application/vnd.github.v3+json'
-      };
-
-      const axiosResult = await axios.post(
-        url,
-        { event_type: 'created' },
-        { headers }
-      );
-      console.log('axiosResultUpdate:', axiosResult)
+      console.log('AFTER UPDATE');
+      if (process.env.NODE_ENV === 'production') {
+        actionTrigger('updated');
+      }
     },
   },
 };

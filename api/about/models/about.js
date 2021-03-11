@@ -22,7 +22,7 @@ module.exports = {
 
       const axiosResult = await axios.post(
         url,
-        { event_type: 'created', repo: 'portfolio' },
+        { event_type: 'created' },
         { headers }
       );
       console.log('axiosResult:', axiosResult)
@@ -32,7 +32,7 @@ module.exports = {
       const url = 'https://api.github.com/repos/clintlosee/portfolio/dispatches';
 
       const token = process.env.GITHUB_TOKEN;
-      console.log('token============:', token)
+      console.log('token Update============:', token)
 
       const headers = {
         Authorization: `Bearer ${token}`,
@@ -42,10 +42,10 @@ module.exports = {
 
       const axiosResult = await axios.post(
         url,
-        { event_type: 'created', repo: 'portfolio' },
+        { event_type: 'created' },
         { headers }
       );
-      console.log('axiosResult:', axiosResult)
+      console.log('axiosResultUpdate:', axiosResult)
     },
   },
 };

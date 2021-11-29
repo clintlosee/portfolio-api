@@ -1,7 +1,7 @@
 {
   "name": "portfolio-api",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Strapi Portfolio API",
   "scripts": {
     "dev": "strapi develop",
@@ -16,16 +16,16 @@
     "pg": "^8.5.1",
     "pg-connection-string": "^2.4.0",
     "sqlite3": "5.0.0",
-    "strapi": "3.5.3",
-    "strapi-admin": "3.5.3",
-    "strapi-connector-bookshelf": "3.5.3",
-    "strapi-plugin-content-manager": "3.5.3",
-    "strapi-plugin-content-type-builder": "3.5.3",
-    "strapi-plugin-email": "3.5.3",
-    "strapi-plugin-upload": "3.5.3",
-    "strapi-plugin-users-permissions": "3.5.3",
-    "strapi-provider-upload-cloudinary": "^3.5.3",
-    "strapi-utils": "3.5.3"
+    "strapi": "3.5.4",
+    "strapi-admin": "3.5.4",
+    "strapi-connector-bookshelf": "3.5.4",
+    "strapi-plugin-content-manager": "3.5.4",
+    "strapi-plugin-content-type-builder": "3.5.4",
+    "strapi-plugin-email": "3.5.4",
+    "strapi-plugin-upload": "3.5.4",
+    "strapi-plugin-users-permissions": "3.5.4",
+    "strapi-provider-upload-cloudinary": "^3.5.4",
+    "strapi-utils": "3.5.4"
   },
   "author": {
     "name": "Clint Losee"
